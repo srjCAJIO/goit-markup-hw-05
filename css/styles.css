@@ -1,0 +1,221 @@
+/* основные стили всей страницы*/
+:root {
+    --brandblack: #000000;
+    --brandblue: #2196f3;
+    --textgrey: #757575;
+    --textblack: #212121;
+    --backgroundlight: #f5f4fa;
+    --backgrounddark: #2f303a;
+    --white-color: #ffffff;
+    --bordercolor: #ececec;
+
+
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--textgrey);
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    background-color: var(--white-color);
+}
+
+.list {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.hand {
+    cursor: pointer;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    color: var(--textblack);
+}
+
+.hide {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    margin: -1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+}
+
+.acent {
+    color: var(--brandblue);
+}
+
+.logo,
+.logo:focus,
+.logo:hover {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: var(--brandblack);
+    text-decoration: none;
+}
+
+/* header */
+
+.header {
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid var(--bordercolor);
+    background-color: var(--white-color);
+}
+
+.nav-link {
+    color: var(--textblack);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--brandblue);
+}
+
+.contact-link {
+    color: inherit;
+}
+
+/* .contact-link:hover,
+.contact-link:focus {
+    color: var(--brandblue);
+} */
+
+/* main */
+
+.hero {
+    background-color: var(--backgrounddark);
+}
+.hero-slogan {
+    color: var(--white-color);
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+.hero-btn {
+    font-family: inherit;
+    color: var(--white-color);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    letter-spacing: 0.06em;
+        width: 200px;
+        height: 50px;
+        border: none;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        background-color: var(--brandblue);
+}
+
+.benefits-title {
+    color: var(--textblack);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+}
+.benefits-descr {
+    font-size: 14px;
+    line-height: 1.71;
+}
+
+/* .occupation { 
+
+}
+*/
+.team {
+    background-color: var(--backgroundlight);
+}
+.team-member {
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    background-color: var(--white-color);
+}
+.member-name {
+    font-weight: 500;
+    color: var(--textblack);
+}
+
+/* footer */
+
+.footer,
+.footer .logo {
+    color: var(--white-color);
+    background-color: var(--backgrounddark);
+}
+
+.footer-address {
+    font-style: inherit;
+    line-height: 1.71;
+}
+
+.footer-contact .contact-link {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-link:hover,
+.contact-link:focus {
+    color: var(--brandblue);
+}
+
+/* страница портфолио */
+
+/* фильтр */
+.filter-btn {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    text-align: center;
+    color: var(--textblack);
+    height: 38px;
+    width: auto;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--backgroundlight);
+}
+.filter-btn:hover,
+.filter-btn:focus {
+    color: var(--white-color);
+    background-color: var(--brandblue);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+/* галерея */
+.project {
+    border: 1px solid var(--bordercolor);
+}
+.project-img {
+    width:370px;
+}
+.project-name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--textblack);
+}
+.project-type {
+    font-size: 16px;
+    line-height: 1.88;
+}
