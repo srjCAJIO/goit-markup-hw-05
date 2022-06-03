@@ -2,6 +2,7 @@
 :root {
     --brandblack: #000000;
     --brandblue: #2196f3;
+    --hoverblue: #188ce8;
     --textgrey: #757575;
     --textblack: #212121;
     --backgroundlight: #f5f4fa;
@@ -15,10 +16,10 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    color: var(--textgrey);
-    font-style: normal;
+    font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
+    color: var(--textgrey);
     background-color: var(--white-color);
 }
 
@@ -74,7 +75,6 @@ body {
 
 .header {
     font-weight: 500;
-    font-size: 14px;
     letter-spacing: 0.02em;
     border-bottom: 1px solid var(--bordercolor);
     background-color: var(--white-color);
@@ -120,22 +120,22 @@ body {
     line-height: 1.88;
     text-align: center;
     letter-spacing: 0.06em;
-        width: 200px;
-        height: 50px;
         border: none;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
         background-color: var(--brandblue);
+}
+.hero-btn:hover,
+.hero-btn:focus {
+    background-color: var(--hoverblue);
 }
 
 .benefits-title {
     color: var(--textblack);
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 14px;
 }
 .benefits-descr {
-    font-size: 14px;
     line-height: 1.71;
 }
 
@@ -189,8 +189,6 @@ body {
     line-height: 1.63;
     text-align: center;
     color: var(--textblack);
-    height: 38px;
-    width: auto;
     border: none;
     border-radius: 4px;
     background-color: var(--backgroundlight);
