@@ -131,9 +131,10 @@ body {
 }
 
 .benefits-title {
-    color: var(--textblack);
-    text-transform: uppercase;
+    font-size: inherit;
     font-weight: 700;
+    text-transform: uppercase;
+    color: var(--textblack);
 }
 
 .benefits-descr {
@@ -156,6 +157,7 @@ body {
 }
 
 .member-name {
+    font-size: inherit;
     font-weight: 500;
     color: var(--textblack);
 }
