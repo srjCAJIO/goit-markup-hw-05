@@ -11,7 +11,19 @@
     --bordercolor: #ececec;
 }
 
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 body {
+    margin: 0;
+    
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     line-height: 1.14;
@@ -20,8 +32,27 @@ body {
     background-color: var(--white-color);
 }
 
+h1,h2,h3,h4,h5,h6,p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .list {
+    margin: 0;
+    padding: 0;
     list-style: none;
+}
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .link {
@@ -60,10 +91,15 @@ body {
 .logo,
 .logo:focus,
 .logo:hover {
+        /* outline: 1px solid red; */
+    margin-top: -32px;
+    margin-bottom: -32px;
+
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
+    letter-spacing: 0.03em;
     color: var(--brandblack);
     text-decoration: none;
 }
@@ -71,10 +107,37 @@ body {
 /* header */
 
 .header {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    
     font-weight: 500;
     letter-spacing: 0.02em;
     border-bottom: 1px solid var(--bordercolor);
     background-color: var(--white-color);
+}
+
+.header .container {
+       /* outline: 1px solid red; */
+    
+    display: flex;
+    /* height: 80px; */
+    /* align-items: stretch; */
+}
+
+.header-nav {
+        /* outline: 1px solid red; */
+    display: flex;
+    align-items: center;
+}
+
+.site-nav {
+        /* outline: 1px solid red; */
+    display: flex;
+    margin-left: 93px;
+}
+
+.item + .item {
+    margin-left: 50px;
 }
 
 .nav-link {
@@ -84,6 +147,13 @@ body {
 .nav-link:hover,
 .nav-link:focus {
     color: var(--brandblue);
+}
+
+.site-contact {
+        /* outline: 1px solid red; */
+    display: flex;
+    align-items: center;
+    margin-left: auto;
 }
 
 .contact-link {
@@ -98,26 +168,43 @@ body {
 /* main */
 
 .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    
     background-color: var(--backgrounddark);
+    text-align: center;
 }
 
+/* .hero .container {
+        outline: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
 .hero-slogan {
+        /* outline: 1px solid red; */
+    margin: auto;
+    width: 670px;
+    
     color: var(--white-color);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
 
 .hero-btn {
+        /* outline: 1px solid red; */
+    margin-top: 30px;
+    padding: 10px 32px;
+
     font-family: inherit;
     color: var(--white-color);
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
-    text-align: center;
     letter-spacing: 0.06em;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -130,7 +217,28 @@ body {
     background-color: var(--hoverblue);
 }
 
+/* benefits */
+
+.benefits {
+    padding-bottom: 0;
+}
+
+.benefits-list {
+    display: flex;
+    /* margin: 0; */
+}
+
+.benefits-item {
+        /* outline: 1px solid red; */
+    width: calc(100%/4-30);
+}
+
+.benefits-item + .benefits-item {
+    margin-left: 30px;
+}
+
 .benefits-title {
+        /* outline: 1px solid red; */    
     font-size: inherit;
     font-weight: 700;
     text-transform: uppercase;
@@ -138,22 +246,56 @@ body {
 }
 
 .benefits-descr {
+        /* outline: 1px solid red; */
+    margin-top: 10px;
+    height: 75px; 
+    /* добавил явный размер так как иначе не совпадает с макетом */
+    
     line-height: 1.71;
 }
 
-/* .occupation { 
 
+/* occupation */
+
+.occupation-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
 }
-*/
+
+.occupation-img {
+    display: block;
+}
+
+
+
+/* team */
+
 .team {
     background-color: var(--backgroundlight);
 }
 
+.team-list {
+    display: flex;
+    margin-top: 50px;
+}
+
 .team-member {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
     background-color: var(--white-color);
+}
+
+.team-member + .team-member {
+    margin-left: 30px;
+}
+
+.member-photo {
+    display: block;
 }
 
 .member-name {
@@ -162,17 +304,40 @@ body {
     color: var(--textblack);
 }
 
+.member-position {
+    margin-top: 10px;
+}
+
+.member-text {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
 /* footer */
 
-.footer,
-.footer .logo {
-    color: var(--white-color);
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color: var(--backgrounddark);
 }
 
 .footer-address {
+    margin-top: 20px;
     font-style: inherit;
     line-height: 1.71;
+}
+
+.contact-item,
+.contact-address {
+    height: 21px;
+}
+
+.contact-item + .contact-item {
+    margin-top: 9px;
+}
+
+.footer .logo,
+.contact-address {
+    color: var(--white-color);
 }
 
 .footer-contact .contact-link {
@@ -187,7 +352,16 @@ body {
 /* страница портфолио */
 
 /* фильтр */
+
+.projects-filter {
+    display: flex;
+    justify-content: center;
+}
+
 .filter-btn {
+    /* outline: 1px solid red; */
+    padding: 6px 22px;
+    
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -200,6 +374,10 @@ body {
     background-color: var(--backgroundlight);
 }
 
+.filter-item + .filter-item {
+    margin-left: 8px;
+}
+
 .filter-btn:hover,
 .filter-btn:focus {
     color: var(--white-color);
@@ -208,15 +386,36 @@ body {
 }
 
 /* галерея */
+
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
 .project {
+    /* outline: 1px solid red; */
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 370px;
     border: 1px solid var(--bordercolor);
 }
 
+.project:nth-child(3n+1) {
+    margin-left: 0;
+}
+
 .project-img {
+    display: block;
     width: 370px;
 }
 
+.project-text {
+    padding: 20px 24px;
+}
+
 .project-name {
+    /* outline: 1px solid red; */
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -225,6 +424,8 @@ body {
 }
 
 .project-type {
+    /* outline: 1px solid red; */
+    margin-top: 4px;
     font-size: 16px;
     line-height: 1.88;
 }
