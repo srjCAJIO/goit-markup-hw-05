@@ -9,6 +9,7 @@
     --backgrounddark: #2f303a;
     --white-color: #ffffff;
     --bordercolor: #ececec;
+    --mainspacer: 30px
 }
 
 html {
@@ -45,8 +46,8 @@ h1,h2,h3,h4,h5,h6,p {
 
 .container {
     width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: calc(var(--mainspacer)/2);
+    padding-right: calc(var(--mainspacer)/2);
     margin: 0 auto;
 }
 
@@ -92,8 +93,8 @@ h1,h2,h3,h4,h5,h6,p {
 .logo:focus,
 .logo:hover {
         /* outline: 1px solid red; */
-    margin-top: -32px;
-    margin-bottom: -32px;
+    /* margin-top: -32px;
+    margin-bottom: -32px; */
 
     font-family: 'Raleway';
     font-weight: 700;
@@ -107,9 +108,6 @@ h1,h2,h3,h4,h5,h6,p {
 /* header */
 
 .header {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    
     font-weight: 500;
     letter-spacing: 0.02em;
     border-bottom: 1px solid var(--bordercolor);
@@ -120,8 +118,7 @@ h1,h2,h3,h4,h5,h6,p {
        /* outline: 1px solid red; */
     
     display: flex;
-    /* height: 80px; */
-    /* align-items: stretch; */
+    height: 80px; /* добавил явный размер так как иначе не совпадает с макетом */
 }
 
 .header-nav {
@@ -175,13 +172,6 @@ h1,h2,h3,h4,h5,h6,p {
     text-align: center;
 }
 
-/* .hero .container {
-        outline: 1px solid red;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
-
 .hero-slogan {
         /* outline: 1px solid red; */
     margin: auto;
@@ -230,11 +220,11 @@ h1,h2,h3,h4,h5,h6,p {
 
 .benefits-item {
         /* outline: 1px solid red; */
-    width: calc(100%/4-30);
+    width: calc(100%/4-var(--mainspacer));
 }
 
 .benefits-item + .benefits-item {
-    margin-left: 30px;
+    margin-left: var(--mainspacer);
 }
 
 .benefits-title {
@@ -248,8 +238,7 @@ h1,h2,h3,h4,h5,h6,p {
 .benefits-descr {
         /* outline: 1px solid red; */
     margin-top: 10px;
-    height: 75px; 
-    /* добавил явный размер так как иначе не совпадает с макетом */
+    height: 75px; /* добавил явный размер так как иначе не совпадает с макетом */
     
     line-height: 1.71;
 }
@@ -265,6 +254,8 @@ h1,h2,h3,h4,h5,h6,p {
 
 .occupation-img {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -291,11 +282,13 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 .team-member + .team-member {
-    margin-left: 30px;
+    margin-left: var(--mainspacer);
 }
 
 .member-photo {
     display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .member-name {
@@ -328,7 +321,7 @@ h1,h2,h3,h4,h5,h6,p {
 
 .contact-item,
 .contact-address {
-    height: 21px;
+    height: 21px; /* добавил явный размер так как иначе не совпадает с макетом */
 }
 
 .contact-item + .contact-item {
@@ -395,8 +388,8 @@ h1,h2,h3,h4,h5,h6,p {
 
 .project {
     /* outline: 1px solid red; */
-    margin-top: 30px;
-    margin-left: 30px;
+    margin-top: var(--mainspacer);
+    margin-left: var(--mainspacer);
     width: 370px;
     border: 1px solid var(--bordercolor);
 }
@@ -407,7 +400,8 @@ h1,h2,h3,h4,h5,h6,p {
 
 .project-img {
     display: block;
-    width: 370px;
+    max-width: 100%;
+    height: auto;
 }
 
 .project-text {
