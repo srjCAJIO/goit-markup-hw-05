@@ -183,7 +183,7 @@ h1,h2,h3,h4,h5,h6,p {
 .hero-slogan {
         /* outline: 1px solid red; */
     margin: auto;
-    width: 670px;
+    max-width: 670px;
     
     color: var(--white-color);
     font-weight: 900;
@@ -228,11 +228,12 @@ h1,h2,h3,h4,h5,h6,p {
 
 .benefits-item {
         /* outline: 1px solid red; */
-    width: calc(100%/4-var(--mainspacer));
+    margin-left: var(--mainspacer);
+    width: calc((100% - (var(--mainspacer) * 3)) / 4);
 }
 
-.benefits-item + .benefits-item {
-    margin-left: var(--mainspacer);
+.benefits-item:nth-child(4n+1) {
+    margin-left: 0;
 }
 
 .benefits-title {
@@ -257,8 +258,18 @@ h1,h2,h3,h4,h5,h6,p {
 
 .occupation-list {
     display: flex;
-    justify-content: space-between;
     margin-top: 50px;
+    /* justify-content: space-between; */
+}
+
+.occupation-item {
+    width: calc((100% - (var(--mainspacer) * 2))/ 3);
+    
+    margin-left: var(--mainspacer);
+}
+
+.occupation-item:nth-child(3n+1) {
+    margin-left: 0;
 }
 
 .occupation-img {
@@ -281,6 +292,8 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 .team-member {
+    margin-left: var(--mainspacer);
+    width: calc((100% - (var(--mainspacer) * 3)) / 4);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
@@ -290,8 +303,8 @@ h1,h2,h3,h4,h5,h6,p {
     background-color: var(--white-color);
 }
 
-.team-member + .team-member {
-    margin-left: var(--mainspacer);
+.team-member:nth-child(4n+1) {
+    margin-left: 0;
 }
 
 .member-photo {
@@ -396,8 +409,7 @@ h1,h2,h3,h4,h5,h6,p {
     /* outline: 1px solid red; */
     margin-top: var(--mainspacer);
     margin-left: var(--mainspacer);
-    width: 370px;
-    border: 1px solid var(--bordercolor);
+    width: calc((100% - (var(--mainspacer) * 2)) / 3);
 }
 
 .project:nth-child(3n+1) {
@@ -412,6 +424,8 @@ h1,h2,h3,h4,h5,h6,p {
 
 .project-text {
     padding: 20px 24px;
+    border: 1px solid var(--bordercolor);
+    border-top: none;
 }
 
 .project-name {
