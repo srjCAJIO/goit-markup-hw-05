@@ -79,6 +79,7 @@ a {
     line-height: 1.17;
     text-align: center;
     color: var(--textblack);
+    margin-bottom: 50px;
 }
 
 .hide {
@@ -187,7 +188,6 @@ a {
 /*-------------- MAIN --------------*/
 
 .hero {
-    background-color: var(--backgndnoimg);
     text-align: center;
 }
 
@@ -197,6 +197,7 @@ a {
     height: 600px;
     max-width: 1600px;
     margin: auto;
+    background-color: var(--backgndnoimg);
     background-image:
         linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url("../images/mainhero-bg.jpg");
@@ -293,7 +294,6 @@ a {
 
 .occupation-list {
     display: flex;
-    margin-top: 50px;
     /* justify-content: space-between; */
 }
 
@@ -323,13 +323,14 @@ a {
 
 .team-list {
     display: flex;
-    margin-top: 50px;
 }
 
 .team-member {
     margin-left: var(--mainspacer);
     width: calc((100% - (var(--mainspacer) * 3)) / 4);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+                0px 1px 1px rgba(0, 0, 0, 0.14), 
+                0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 
     font-size: 16px;
@@ -398,13 +399,12 @@ a {
 /* ------------------clients-------------------- */
 
 .clients-list {
-    margin-top: 50px;
     display: flex;
     justify-content: space-between;
 }
 
 .clients-item {
-    width: 170px;
+    width: calc((100% - (var(--mainspacer) * 5)) / 6);
     height: 92px;
 }
 
@@ -523,7 +523,9 @@ a {
 .filter-btn:focus {
     color: var(--white-color);
     background-color: var(--brandblue);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+                0px 1px 2px rgba(0, 0, 0, 0.08), 
+                0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* галерея */
@@ -541,8 +543,16 @@ a {
     width: calc((100% - (var(--mainspacer) * 2)) / 3);
 }
 
-.project:hover {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+.project-link {
+    display: block;
+    color: inherit;
+}
+
+.project-link:hover,
+.project-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+                0px 4px 4px rgba(0, 0, 0, 0.06), 
+                1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project:nth-child(3n+1) {
