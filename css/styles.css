@@ -167,6 +167,10 @@ a {
     transform: scale(1.05);
 }
 
+.nav-link.current {
+    color: var(--brandblue);
+}
+
 .current::after {
     content: '';
     position: absolute;
@@ -323,6 +327,7 @@ a {
     background: var(--white-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    cursor: pointer;
 }
 
 /* ------------------benefits------------------ */
@@ -404,6 +409,7 @@ a {
         
     position: absolute;
     bottom: 0;
+    left: 0;
     
     font-size: inherit;
     text-align: center;
